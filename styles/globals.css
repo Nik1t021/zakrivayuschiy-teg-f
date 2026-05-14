@@ -9,9 +9,7 @@
 }
 
 body {
-  margin: 0 auto;
-  min-inline-size: 375px;
-  max-inline-size: 1440px;
+  margin: 0;
 }
 
 h1,
@@ -34,7 +32,6 @@ a {
 
 button,
 input {
-  padding-inline: 0;
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
@@ -47,10 +44,10 @@ ol {
 
 .visually-hidden {
   position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
   inline-size: 1px;
   block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
 }

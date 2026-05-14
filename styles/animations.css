@@ -10,39 +10,95 @@
 
 */
 
+@keyframes sparks_opacity {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
 
+@keyframes heart_zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
 
 @keyframes arrow {
-  0% {
-    left: -18px;
-  }
-  100% {
-    left: -22px;
-  }
+    from {
+        transform: translate(0px);
+    }
+    to {
+        transform: translate(4px);
+    }
 }
 
-@keyframes scale-heart {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
+.like-icon .core {
+    fill: var(--main-background-color, #fff);
+    transition: fill 0.3s linear 0.03s;
 }
 
-@keyframes sparks-heart {
-  0% {
-    fill: transparent;
-  }
+.like-icon .body {
+    fill: var(--main-background-color, #fff);
+    transition: fill 0.3s linear;
+}
 
-  50% {
-    fill: red;
-  }
+.like-icon .contour {
+    fill: var(--heart-contour-color, #000);
+    transition: fill 0.1s linear;
+}
 
-  100% {
-    fill: transparent;
-  }
+.heart {
+    transform-origin: center;
+}
+
+.like-icon .sparks {
+    opacity: 0;
+}
+
+.like-icon:hover .body {
+    fill: var(--heart-contour-color, #000);
+    transition-delay: 0.05s;
+}
+
+.like-icon:hover .core {
+    fill: var(--heart-contour-color, #000);
+    transition-delay: 0s;
+}
+
+.like-icon:active .body {
+    fill: var(--heart-animation_color, #ff0000);
+    transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .core {
+    fill: var(--heart-animation_color, #ff0000);
+    transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .contour {
+    fill: var(--heart-sparks-color, #ff0000);
+    transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .core {
+    fill: var(--heart-sparks-color, #ff0000);
+    transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .body {
+    fill: var(--heart-sparks-color, #ff0000);
+    transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .sparks {
+    animation: sparks_opacity 0.3s ease-in 0.3s alternate;
+}
+
+.like-icon.is-liked .heart {
+    animation: heart_zoom 0.3s ease-in 0.1s alternate;
 }

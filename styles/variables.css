@@ -1,45 +1,22 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --second-family: "PressStart2P", fantasy;
-  --font-family: "Inter-Variable", sans-serif;
-  --text-color: #000;
-  --border-color: #000;
-  --backgraund-color: #fff;
-  --padding-conteiner: clamp(0rem, -8.2528rem + 35.212vw, 23rem);
-  --gradient-1: #d3d3d3;
-  --gradient-2: #e7e7e7;
-  --gradient-3: #1a1a1a;
-  --shadow-overlay: #fff;
-  --svg-like-icon: #000;
-  --like-contour: #000;
-  --font-card-weight: 700;
-  --text-card-weight: 400;
-  --main-body-svg-like: #000;
-  --core-svg-like: #000;
-  --decoration-color-focus: #000;
-  --bg-color-bt: #000;
-  --color-bt: #fff;
-  --bg-svg-floppy: #fff;
-  --heart-like: #ff0000;
-  --shadow-button-focus: #000;
+    --main-background-color: white;
+    --color-accent: black;
+    --main-text-color: black;
+    --stroke-text-color: white;
+    --button-background-color: white;
+    --button-inverse-text-color: white;
 
-  --header-padding-inline: clamp(0rem, -2.4615rem + 14.2357vw, 4rem);
-  --header-padding-block: ;
-  /* --header__title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  --header__subtitle: clamp(0.875rem, 0.5449rem + 1.4085vw, 1.8125rem); */
-  --background-img: repeating-linear-gradient(
-      to right,
-      var(--gradient-1, #d3d3d3) 0px 2px,
-      transparent 2px 4px
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      var(--gradient-1, #d3d3d3) 0px 2px,
-      transparent 2px 4px
-    ),
-    linear-gradient(
-      to bottom,
-      var(--gradient-2, #e7e7e7) 0.01%,
-      var(--gradient-3, #1a1a1a) 100%
-    );
+    --main-font: "Inter";
+    --accent-font: "PressStart2P";
+    --font-weight-title: 700;
+    --font-weight: 400;
+    --background-gradient: repeating-linear-gradient(270deg, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px), linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+
+    --heart-contour-color: var(--main-text-color, #000000);
+    --heart-body-color: #00000000;
+    --heart-sparks-color: red;
+    --heart-animation_color: red;
+
+    --border-size: 2px;
 }

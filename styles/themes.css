@@ -6,98 +6,61 @@
 */
 
 :root.theme-dark {
-  --second-family: "PressStart2P", fantasy;
-  --font-family: "Inter-Variable", sans-serif;
-  --text-color: #00cc14;
-  --border-color: #00cc14;
-  --backgraund-color: #000;
-  --padding-conteiner: clamp(0rem, -8.2528rem + 35.212vw, 23rem);
-  --gradient-1: #000;
-  --gradient-2: #007f0c;
-  --gradient-3: #004306;
-  --shadow-overlay: #000;
-  --svg-like-icon: #00cc14;
-  --like-contour: #00cc14;
-  --font-card-weight: 785;
-  --text-card-weight: 465;
-  --decoration-color-focus: #00cc14;
-  --main-body-svg-like: #00cc14;
-  --core-svg-like: #00cc14;
-  --bg-color-bt: #00cc14;
-  --color-bt: #00cc14;
-  --bg-svg-floppy: #00cc14;
-  --shadow-button-focus: #00cc14;
+  --main-background-color: black;
+  --color-accent: #00cc14;
+  --main-text-color: #00cc14;
+  --stroke-text-color: black;
+  --button-background-color: black;
+  --button-inverse-text-color: #00cc14;
+
+  --font-weight-title: 785;
+  --font-weight: 465;
+  --background-gradient: repeating-linear-gradient(
+      270deg,
+      #000 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
+    linear-gradient(#007f0c, #004306);
+}
+
+:root.theme-light {
+  --main-background-color: white;
+  --color-accent: black;
+  --main-text-color: black;
+  --stroke-text-color: white;
+  --button-background-color: white;
+  --button-inverse-text-color: white;
+
+  --font-weight-title: 700;
+  --font-weight: 400;
+  --background-gradient: repeating-linear-gradient(
+      270deg,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --second-family: "PressStart2P", fantasy;
-    --font-family: "Inter-Variable", sans-serif;
-    --text-color: #00cc14;
-    --border-color: #00cc14;
-    --backgraund-color: #000;
-    --padding-conteiner: clamp(0rem, -8.2528rem + 35.212vw, 23rem);
-    --gradient-1: #000;
-    --gradient-2: #007f0c;
-    --gradient-3: #004306;
-    --shadow-overlay: #000;
-    --svg-like-icon: #00cc14;
-    --like-contour: #00cc14;
-    --font-card-weight: 785;
-    --text-card-weight: 465;
-    --decoration-color-focus: #00cc14;
-    --main-body-svg-like: #00cc14;
-    --core-svg-like: #00cc14;
-    --bg-color-bt: #00cc14;
-    --color-bt: #00cc14;
-    --bg-svg-floppy: #00cc14;
-    --shadow-button-focus: #00cc14;
-  }
-}
+    --main-background-color: black;
+    --color-accent: #00cc14;
+    --stroke-text-color: black;
+    --button-background-color: black;
+    --button-inverse-text-color: #00cc14;
+    --main-text-color: #00cc14;
 
-:root.theme-light {
-  --second-family: "PressStart2P", fantasy;
-  --font-family: "Inter-Variable", sans-serif;
-  --text-color: #000;
-  --border-color: #000;
-  --backgraund-color: #fff;
-  --padding-conteiner: clamp(0rem, -8.2528rem + 35.212vw, 23rem);
-  --gradient-1: #d3d3d3;
-  --gradient-2: #e7e7e7;
-  --gradient-3: #1a1a1a;
-  --shadow-overlay: #fff;
-  --like-contour: #000;
-  --font-card-weight: 700;
-  --text-card-weight: 400;
-  --main-body-svg-like: #000;
-  --core-svg-like: #000;
-  --decoration-color-focus: #000;
-  --bg-color-bt: #000;
-  --bg-svg-floppy: #fff;
-  --shadow-button-focus: #000;
-  --color-bt: #fff;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --second-family: "PressStart2P", fantasy;
-    --font-family: "Inter-Variable", sans-serif;
-    --text-color: #000;
-    --border-color: #000;
-    --backgraund-color: #fff;
-    --padding-conteiner: clamp(0rem, -8.2528rem + 35.212vw, 23rem);
-    --gradient-1: #d3d3d3;
-    --gradient-2: #e7e7e7;
-    --gradient-3: #1a1a1a;
-    --shadow-overlay: #fff;
-    --like-contour: #000;
-    --font-card-weight: 700;
-    --text-card-weight: 400;
-    --main-body-svg-like: #000;
-    --core-svg-like: #000;
-    --decoration-color-focus: #000;
-    --bg-color-bt: #000;
-    --bg-svg-floppy: #fff;
-    --shadow-button-focus: #000;
+    --font-weight-title: 785;
+    --font-weight: 465;
+    --background-gradient: repeating-linear-gradient(
+        270deg,
+        #000 0 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
+      linear-gradient(#007f0c, #004306);
   }
 }

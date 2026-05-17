@@ -29,7 +29,7 @@
     padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
     padding-block-end: 22px;
     margin-bottom: 100px;
-
+    padding: 130px 0 130px 0;
     margin-inline: auto;
 
     background-color: var(--main-background-color);
@@ -50,71 +50,6 @@
 .header__title {
     text-transform: uppercase;
     font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
-}
-
-.header__theme-menu {
-    margin-block-start: 3px;
-    margin-inline-start: -1px;
-}
-
-.theme-menu__list {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-    padding-inline-start: 20px;
-}
-
-.theme-menu__button {
-    position: relative;
-    background: none;
-    border: none;
-
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-    appearance: none;
-    cursor: pointer;
-
-    transition: opacity 0.3s ease;
-}
-
-.theme-menu__button:disabled {
-    opacity: 0.6;
-    pointer-events: none;
-}
-
-.theme-menu__button:disabled::before {
-    content: "▶";
-    position: absolute;
-    inset-inline-start: -19px;
-    inset-block-start: 1px;
-    animation: arrow 0.5s ease-in-out infinite alternate;
-}
-
-.theme-menu__button:hover {
-    opacity: 0.6;
-}
-
-.theme-menu__button:focus {
-    outline: 0;
-    opacity: 0.6;
-}
-
-.theme-menu__button::after {
-    content: "";
-    display: block;
-    background: currentColor;
-    transition: transform 0.3s ease;
-    transform: scaleX(0);
-    transform-origin: left;
-
-    block-size: 2px;
-}
-
-.theme-menu__button:focus-visible::after {
-    transform: scaleX(1);
 }
 
 .main {
@@ -281,10 +216,13 @@
 .button__text {
     color: var(--button-inverse-text-color, #fff);
     mix-blend-mode: difference;
+    position: relative;
+    z-index: 1;
 }
 
-.button__text-uppercase {
-    text-transform: uppercase;
+.button_dialog-open {
+  margin: 0 auto;
+  padding: 15px 17px;
 }
 
 .card__icon-button:focus {
@@ -301,68 +239,103 @@
     margin-bottom: 102px;
 }
 
-.button__save {
-    margin: 0 auto;
-    padding: 15px 20px;
-    gap: 8px;
-}
-
-.button__icon {
-    width: 21px;
-    height: 21px;
-
-    mix-blend-mode: difference;
-    color: var(--button-inverse-text-color, #fff);
-}
-
 .dialog {
-    padding: 30px;
-    max-width: none;
-    color: var(--main-text-color, #000);
-    font-family: var(--accent-font, "PressStart2P"), fantasy;
-    line-height: 150%; /* 21px */
-    text-transform: uppercase;
-    background: var(--main-background-color, #fff);
-}
-
-.dialog[open] {
-    display: grid;
-    grid-template-rows: repeat(2, min-content);
-    gap: 30px;
-}
-
-.dialog__content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-
-.floppy__open {
-    width: 39px;
-    height: 39px;
-    flex-shrink: 0;
-    align-content: center;
+  position: fixed;
+  inset: 0;
+  box-sizing: border-box;
+  margin: auto;
+  border: 2px solid var(--main-color, #000);
+  padding: 30px;
+  background-color: var(--bg-color, #fff);
+  max-inline-size: 353px;
 }
 
 .dialog::backdrop {
-    opacity: 75%;
-    background: var(--main-background-color, #000);
+  opacity: 0.75;
+  background-color: var(--main-color, #000);
 }
 
-.dialog__button {
-    padding: 9px 17px;
-    inline-size: 100%;
+.dialog__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
 
-.save__dialog-text {
-    font-family: var(--accent-font), fantasy;
-    font-weight: 400;
-    font-size: 14px;
-    font-style: normal;
-    line-height: 1.5;
-    text-transform: uppercase;
-    max-inline-size: 234px;
+.dialog__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.dialog__text {
+  margin: 0;
+  color: var(--main-color, #000);
+  font-family: var(--accent-font), fantasy;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.dialog__close {
+  justify-content: center;
+  width: 100%;
+}
+
+.button_dialog-open {
+  margin: 0 auto;
+  padding: 15px 17px;
+}
+
+.dialog__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--main-color, #000);
+  padding: 11px 17px;
+  overflow: hidden;
+  color: var(--main-color, #000);
+  font-family: var(--accent-font), fantasy;
+  font-size: 14px;
+  line-height: 13px;
+  background-color: var(--bg-color, #fff);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--main-color, #000);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--main-color, #000);
 }
 
 /* filters section start */
@@ -371,52 +344,56 @@
 }
 
 .filter-kek {
-    filter: brightness(68%) saturate(0%) contrast(184%);
+    filter: grayscale(0.8);
 }
 
 .filter-sepia {
-    filter: sepia(10%);
+    filter: saturate(4) blur(0.5px);
 }
 
 .filter-huerotate {
-    filter: hue-rotate(180deg);
+    filter: hue-rotate(30deg) brightness(0.95) blur(0.5px);
 }
 
 .filter-saturation {
-    filter: saturate(300%);
+    filter: invert(1) contrast(0.6) blur(0.5px);
 }
 
 .filter-grayscale {
-    filter: grayscale(100%);
+    filter: sepia(0.9) contrast(0.9);
 }
 
 .filter-blur {
     filter: blur(20px);
 }
 
-/* filters section end */
+.filters-section-end {
+    filter: saturate(2) brightness(0.8) contrast(0.4) hue-rotate(90deg)
+    blur(1.5px);
+}
 
 @media (width <= 375px) {
     .page {
         inline-size: 100%;
     }
 
-    .button__save {
-        flex-direction: column;
-    }
+    .button_dialog-open {
+    flex-direction: column;
+  }
 
-    .button__icon {
-        width: 28px;
-        height: 28px;
-    }
+    .floppy-icon {
+    width: 28px;
+    height: 28px;
+  }
 
-    .dialog {
-        padding: 30px 40px;
-    }
+     .button_dialog-open {
+    flex-direction: column;
+  }
 
-    .save__dialog-text {
-        max-inline-size: 198px
-    }
+  .dialog {
+    padding: 30px 40px;
+    max-inline-size: 341px;
+  }
 
     .card__image-text {
         top: 23px;

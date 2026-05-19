@@ -208,17 +208,17 @@ button svg{
 }
 
 
-.card__icon-button{
+.card__icon-button {
     display: flex;
     border: none;
     padding: 0;
     outline: 2px solid transparent;
     background: transparent;
-    transition: outline-color 0.3s ease-out;
+    transition:outline-color 0.3s ease-out;
     cursor: pointer;
 }
 
-.card__icon-button:focus,
+.card__icon-button:focus, 
 .card__like-button:focus{
     outline: none;
 }

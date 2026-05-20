@@ -27,30 +27,6 @@
     font-variation-settings: "wght" var(--font-weight-text);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .header{
     display: grid;
     justify-content: center;
@@ -74,7 +50,6 @@
 .header__subtitle{
     font-size: clamp(14px, calc(14px + 9 * (100vw - 375px) / 325), 23px);
 }
-
 
 .cards{
     display: grid;
@@ -157,7 +132,6 @@
     gap: 7px;
 }
 
-
 .button{
     position: relative;
     display: flex;
@@ -207,7 +181,6 @@ button svg{
     box-shadow: 2px 2px 0 var(--main-color, #000);
 }
 
-
 .card__icon-button {
     display: flex;
     border: none;
@@ -231,44 +204,34 @@ button svg{
     min-width: 130px;
 }
 
-
-
-
-.filter-card-void{
+.filter-card-clean{
     filter: grayscale(0.8);
 }
 
-
-.filter-card-concern {
+.filter-card-doubt {
   filter: saturate(4) blur(0.5px);
 }
 
-
-.filter-card-perfectionism {
+.filter-card-ideal {
   filter: hue-rotate(30deg) brightness(0.95) blur(0.5px);
 }
 
-
-.filter-card-support {
+.filter-card-boost {
   filter: invert(1) contrast(0.6) blur(0.5px);
 }
 
-
-.filter-card-strategy {
+.filter-card-bypass {
   filter: sepia(0.9) contrast(0.9);
 }
 
-
-.filter-card-overcoming {
+.filter-card-difficulties {
   filter: blur(20px);
 }
 
-
-.filter-card-estimation {
+.filter-card-result {
   filter: saturate(2) brightness(0.8) contrast(0.4) hue-rotate(90deg)
     blur(1.5px);
 }
-
 
 .dialog{
     position: fixed;
@@ -316,12 +279,10 @@ button svg{
     width: 100%;
 }
 
-
 .button_dialog-open{
     margin: 0 auto;
     padding: 15px 17px;
 }
-
 
 @media(width <= 400px) {
     .header{

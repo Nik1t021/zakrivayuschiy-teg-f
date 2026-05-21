@@ -171,6 +171,12 @@
   z-index: 1;
   color: var(--bg-color, #fff);
   mix-blend-mode: difference;
+  text-transform: uppercase;
+}
+
+.button__text-save{
+  color: var(--bg-color, #fff);
+  mix-blend-mode: difference;
 }
 
 .button:focus {
@@ -282,6 +288,10 @@
 .button_dialog-open {
   margin: 0 auto;
   padding: 15px 17px;
+}
+
+.floppy-icon{
+  flex-shrink: 0;
 }
 
 @media (width <= 400px) {

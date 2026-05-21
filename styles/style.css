@@ -197,8 +197,7 @@
   cursor: pointer;
 }
 
-.card__icon-button:focus,
-.card__like-button:focus {
+.card__icon-button:focus {
   outline: none;
 }
 

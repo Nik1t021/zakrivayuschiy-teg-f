@@ -171,6 +171,9 @@
   z-index: 1;
   color: var(--bg-color, #fff);
   mix-blend-mode: difference;
+}
+
+.text__subtext{
   text-transform: uppercase;
 }
 
